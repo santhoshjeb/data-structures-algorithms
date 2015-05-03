@@ -1,0 +1,32 @@
+Step1: Array Manipulation
+Step2: String Manipulation
+Step3: Recursion
+Revise and re-visit
+
+Tip: Code first, Optimize later
+
+1. Stack( LIFO)
+   - Implement a stack using an array(Done)
+   - Implement stack using two queues(Done)
+   - Implement stack using linked list
+
+2. Queue (FIFO)
+  - Implement using array (Done)
+  - Implement using two stack (Done)
+  - Implement using a linked list (Done)
+
+3. Linked List (Done)
+ -- ArrayList
+ -- HashTables
+ -- Complete Recursion
+
+6. Trees
+  Infix, prefix and postfix
+
+7. Heaps
+
+8. Priority Queues
+ -- Logical Puzzles
+
+9. Algorithms
+ -- complexity notations
