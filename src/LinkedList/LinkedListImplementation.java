@@ -18,7 +18,7 @@ public class LinkedListImplementation {
 		// -1 should be removed and the result should be [0,1,2,3,4,5,6]
 		linkedlist.removeFromLast();
 		// -1 should be removed and the result should be [0,1,2,3,4,5]
-		//linkedlist.printElementsOfLinkedList();
+		linkedlist.printElementsOfLinkedList();
 		linkedlist.getFirst(); //returns 0
 		linkedlist.getLast();  // returns 5
 		

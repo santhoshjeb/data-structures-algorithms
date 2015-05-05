@@ -12,7 +12,7 @@ public class ImplementationClass {
 		
 		queue.remove();
 		queue.remove();
-		//queue.printElementsInTheQueue();
+		queue.printElementsInTheQueue();
 		queue.peek();
 	}
 

@@ -9,7 +9,7 @@ public class ImplementationClass {
 		Stack stack = new Stack();
 		stack.push(first_element);
 		stack.push(second_element);
-		stack.printElementsInTheStack();
+		//stack.printElementsInTheStack();
 		//System.out.println(stack.peek());
 		stack.pop();
 		stack.printElementsInTheStack();

@@ -8,62 +8,50 @@ package QueueUsingArray;
  * Author: Santhosh Jebamani
  * */
 
-public class Queue implements Cloneable{
+public class Queue {
 	
 	public int elements[] = new int[10];
-	public int numberOfElementsAdded=0;
-	
-	
-	public void add(int x) {
-		
-		elements[numberOfElementsAdded] = x;
-		numberOfElementsAdded++;
+	public int rear=-1;
+	int front = 0;
+
+	public void enqueue(int x) {
+
+		rear++;
+		if(rear>=elements.length)
+		{
+			throw new IllegalStateException("Maximum size reached");
+		}
+		elements[rear] = x;
 	}
-	
-	
+
 	/*Method to look up first element in the queue*/
 	public int peek() {
 		
 		//if the array is not empty
-		if(numberOfElementsAdded!=0)
-		return elements[0];
+		if(rear>=front)
+		return elements[front];
 		else
-			return -1;
+			throw new IllegalStateException("Can't peek ! Queue is empty");
 	}
 	
-	public int remove() {
-		
-		
+	public int dequeue() {
 		int removedValue = -1;
-		// Invalidate the first element in the array
-		if(numberOfElementsAdded!=0){
-			
-			 removedValue = elements[0];
-		
-			for(int i=0; i< numberOfElementsAdded; i++)
-		      {
-			elements[i] = elements[i+1];
-		      }
-	
-		//y[numberOfElementsAdded-1]=-1;
-		numberOfElementsAdded--;
-	}
+		if(rear>=front) {
+
+			removedValue = elements[front];
+			front++;
+		}
+		else
+		{
+			throw new IllegalStateException("Queue is empty");
+		}
 		return removedValue;
-		
-}
+    }
 	
 	public void printElementsInTheQueue(){
-		for(int j=0; j<numberOfElementsAdded; j++)
+		for(int j=front; j<=rear; j++)
 		{
 			System.out.print(" "+elements[j]);
 		}
 	}
-	
-	public Object clone() throws CloneNotSupportedException{
-		return super.clone();
-	}
 }
-
-//TODO: Add support to accept negative numbers
-//TODO: Refactor code and make it better
-//TODO: Support to add any type of variable

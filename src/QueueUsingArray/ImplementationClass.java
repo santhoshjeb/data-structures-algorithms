@@ -7,22 +7,11 @@ public class ImplementationClass {
         int second_number = 10;
         Queue x = new Queue();
 
-        //x.printElementsInTheQueue();
-
-        x.add(first_number);
-        x.add(second_number);
-
-        //x.printElementsInTheQueue();
-        // Trying to peek in the queue
-        if (x.peek() == -1)
-            System.out.println("The queue does not have any element at all. Do not try to peek");
-        else
-            System.out.println(x.peek());
-        x.printElementsInTheQueue();
-
-        x.remove();
-
-        System.out.println("Yo");
+        x.enqueue(first_number);
+        x.enqueue(second_number);
+        x.dequeue();
+        System.out.println(x.peek());
+        System.out.println("-------------------------------");
         x.printElementsInTheQueue();
     }
 }

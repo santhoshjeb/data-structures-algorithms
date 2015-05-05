@@ -9,6 +9,7 @@ public class LinkedList {
 	public void addToFront(int element) {
 		if(linkedList == null) {
 			linkedList = new Node(element,null);
+			firstNode = linkedList;
 		}
 		else {
 			//create a new node
